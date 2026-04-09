@@ -1,5 +1,7 @@
 services:
   openticket:
+    environment:
+      TOKEN: ${TOKEN}
     build: .
     volumes:
       - openticket:/home/container
