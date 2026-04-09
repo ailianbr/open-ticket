@@ -3,10 +3,7 @@ services:
     build: .
     volumes:
       - openticket:/home/container
-      - ../files/general.json:/home/container/config/general.json:ro
-      - ../files/options.json:/home/container/config/options.json:ro
-      - ../files/panels.json:/home/container/config/panels.json:ro
-      - ../files/transcripts.json:/home/container/config/transcripts.json:ro
+      - ../files/:/home/container/config:ro
     restart: no
     container_name: open-ticket
 volumes:
