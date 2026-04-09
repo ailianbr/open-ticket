@@ -1,9 +1,10 @@
 services:
   openticket:
+    command: ["sleep", "inf"]
     build: .
     volumes:
       - openticket:/home/container
-      - ../files/:/home/container/config:ro
+      - ../files:/home/container/configs:ro
     restart: no
     container_name: open-ticket
 volumes:
